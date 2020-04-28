@@ -1,0 +1,69 @@
+html {
+  overflow: hidden;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fff;
+  height: 100vh;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+}
+.parallax-wrapper::before {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transform: translateZ(-1px) scale(2);
+}
+
+.regular-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20vh;
+  z-index: 2;
+  position: relative;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 50px;
+  width: 70%;
+  background: #aaa;
+  opacity: 0.4;
+}
+
+
+
+.myVideos {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+p {
+  font-size: 3.5rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  text-shadow: 3px 3px 6px black, 0 0 4em black, 0 0 1em black;
+  font-weight: bold;
+}
